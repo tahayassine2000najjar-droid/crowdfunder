@@ -8,8 +8,8 @@ if(!authHeader){
     return res.status(404).json({message:"no token ,authorization denied"});
 }
 
-const token  = authHeader.startsWith("bearer")
-? authHeader.split("")[1]
+const token  = authHeader.toLowerCase().startsWith("bearer")
+? authHeader.split(" ")[1]
 :null;
 if(!token){
 return res.status(404).json({message:"token format is invalid"});

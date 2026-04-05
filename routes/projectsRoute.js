@@ -5,7 +5,7 @@ const users = require('../data/users')
 const investments = require('../data/investments')
 const {auth , checkRole} = require('../middlewares/authMiddleware')
 const projectSchema  = require('../models/project')
-const { estimatedDocumentCount } = require('../models/User')
+// const { estimatedDocumentCount } = require('../models/User')
 
 
 router.get('/',(req,res)=>{
