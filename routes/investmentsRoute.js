@@ -51,7 +51,7 @@ router.post('/:projectId', auth, checkRole(['investor']), (req, res) => {
     }
 
     res.json({ message: 'Investment successful', project, investment: newInvestment });
-};
+});
 
 router.get('/my/all', auth, checkRole(['investor']), (req, res) => {
     const myInvestments = investments.filter(inv => inv.userId === req.user.id);
