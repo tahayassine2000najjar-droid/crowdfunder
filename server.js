@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/crowdfunder");
+mongoose.connect("mongodb://127.0.0.1:27017/crowdfunder");
 
 app.use("/auth", require("./routes/authRoute.js")); 
 app.use("/projects", require("./routes/projectsRoute.js"));

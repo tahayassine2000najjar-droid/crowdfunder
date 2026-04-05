@@ -16,8 +16,8 @@ return res.status(404).json({message:"token format is invalid"});
 }
 
 try{
-    const decoded = jwt.verify(token, process.env.JWT.SECRET);
-    req.user = decoded.user
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
     next();
 }catch(error){
 return res.status(404).json({message:"token is not valid"});
